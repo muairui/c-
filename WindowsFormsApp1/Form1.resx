@@ -1,0 +1,1415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CheckStatus.Caption" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CheckStatus.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckStatus.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 79</value>
+  </data>
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 126</value>
+  </data>
+  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
+    <value>textBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 190</value>
+  </data>
+  <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
+    <value>textBox3</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 79</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 135</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 199</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 102</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="gridControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 239</value>
+  </data>
+  <data name="gridColumn1.Caption" xml:space="preserve">
+    <value>重量</value>
+  </data>
+  <data name="gridColumn1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn1.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gridColumn2.Caption" xml:space="preserve">
+    <value>体制</value>
+  </data>
+  <data name="gridColumn2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gridControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 200</value>
+  </data>
+  <data name="gridControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Name" xml:space="preserve">
+    <value>gridControl1</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gridControl1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 151</value>
+  </data>
+  <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="textBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Name" xml:space="preserve">
+    <value>textBox4</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>531, 53</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 323</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="grdSample.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 478</value>
+  </data>
+  <data name="gvSample.Appearance.EvenRow.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>224, 224, 224</value>
+  </data>
+  <data name="ChannelSample.Caption" xml:space="preserve">
+    <value>样品信息</value>
+  </data>
+  <data name="grdClmnID.Caption" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="SequenceNo.Caption" xml:space="preserve">
+    <value>序号</value>
+  </data>
+  <data name="SequenceNo.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SequenceNo.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="SampleName.Caption" xml:space="preserve">
+    <value>样品名称</value>
+  </data>
+  <data name="SampleName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SampleName.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="SampleType.Caption" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="repositoryItemTextEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="SampleType.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SampleType.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="PositionNo.Caption" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="PositionNo.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PositionNo.Width" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="SampleBlank.Caption" xml:space="preserve">
+    <value>样品空白</value>
+  </data>
+  <data name="SampleBlankType.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v17.2" name="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="SampleBlankType.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="SampleBlank.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="DevExpress.XtraGrid.v17.2" name="DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="ChannelSample.Fixed" type="DevExpress.XtraGrid.Columns.FixedStyle, DevExpress.XtraGrid.v17.2">
+    <value>Left</value>
+  </data>
+  <data name="ChannelSample.MinWidth" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="ChannelSample.Name" xml:space="preserve">
+    <value>ChannelSample</value>
+  </data>
+  <data name="ChannelSample.Width" type="System.Int32, mscorlib">
+    <value>365</value>
+  </data>
+  <data name="ChannelA.Caption" xml:space="preserve">
+    <value>A道</value>
+  </data>
+  <data name="APeakArea.Caption" xml:space="preserve">
+    <value>信号值</value>
+  </data>
+  <data name="APeakArea.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="APeakArea.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="APeakArea2.Caption" xml:space="preserve">
+    <value>样品值</value>
+  </data>
+  <data name="APeakArea2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="APeakArea2.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="AReferArea.Caption" xml:space="preserve">
+    <value>参比值</value>
+  </data>
+  <data name="AReferArea.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AReferArea.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="ChannelA.MinWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="ChannelA.Name" xml:space="preserve">
+    <value>ChannelA</value>
+  </data>
+  <data name="ChannelA.Width" type="System.Int32, mscorlib">
+    <value>240</value>
+  </data>
+  <data name="ChannelB.Caption" xml:space="preserve">
+    <value>B道</value>
+  </data>
+  <data name="BPeakArea.Caption" xml:space="preserve">
+    <value>信号值</value>
+  </data>
+  <data name="BPeakArea.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BPeakArea.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="BPeakArea2.Caption" xml:space="preserve">
+    <value>样品值</value>
+  </data>
+  <data name="BPeakArea2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BPeakArea2.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="BReferArea.Caption" xml:space="preserve">
+    <value>参比值</value>
+  </data>
+  <data name="BReferArea.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BReferArea.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="ChannelB.MinWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="ChannelB.Name" xml:space="preserve">
+    <value>ChannelB</value>
+  </data>
+  <data name="ChannelB.Width" type="System.Int32, mscorlib">
+    <value>240</value>
+  </data>
+  <data name="ChannelC.Caption" xml:space="preserve">
+    <value>C道</value>
+  </data>
+  <data name="CPeakArea.Caption" xml:space="preserve">
+    <value>信号值</value>
+  </data>
+  <data name="CPeakArea.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CPeakArea.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="CPeakArea2.Caption" xml:space="preserve">
+    <value>样品值</value>
+  </data>
+  <data name="CPeakArea2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CPeakArea2.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="CReferArea.Caption" xml:space="preserve">
+    <value>参比值</value>
+  </data>
+  <data name="CReferArea.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CReferArea.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="ChannelC.MinWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="ChannelC.Name" xml:space="preserve">
+    <value>ChannelC</value>
+  </data>
+  <data name="ChannelC.Width" type="System.Int32, mscorlib">
+    <value>240</value>
+  </data>
+  <data name="ChannelD.Caption" xml:space="preserve">
+    <value>D道</value>
+  </data>
+  <data name="DPeakArea.Caption" xml:space="preserve">
+    <value>信号值</value>
+  </data>
+  <data name="DPeakArea.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DPeakArea.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="DPeakArea2.Caption" xml:space="preserve">
+    <value>样品值</value>
+  </data>
+  <data name="DPeakArea2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DPeakArea2.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="DReferArea.Caption" xml:space="preserve">
+    <value>参比值</value>
+  </data>
+  <data name="DReferArea.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DReferArea.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="ChannelD.MinWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="ChannelD.Name" xml:space="preserve">
+    <value>ChannelD</value>
+  </data>
+  <data name="ChannelD.Width" type="System.Int32, mscorlib">
+    <value>240</value>
+  </data>
+  <data name="Conc.Caption" xml:space="preserve">
+    <value>浓度</value>
+  </data>
+  <data name="AConcentration.Caption" xml:space="preserve">
+    <value>浓度A</value>
+  </data>
+  <data name="AConcentration.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AConcentration.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="BConcentration.Caption" xml:space="preserve">
+    <value>浓度B</value>
+  </data>
+  <data name="BConcentration.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BConcentration.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="CConcentration.Caption" xml:space="preserve">
+    <value>浓度C</value>
+  </data>
+  <data name="CConcentration.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CConcentration.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="DConcentration.Caption" xml:space="preserve">
+    <value>浓度D</value>
+  </data>
+  <data name="DConcentration.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DConcentration.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="Conc.MinWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="Conc.Name" xml:space="preserve">
+    <value>Conc</value>
+  </data>
+  <data name="Conc.Width" type="System.Int32, mscorlib">
+    <value>320</value>
+  </data>
+  <data name="Unit.Caption" xml:space="preserve">
+    <value>浓度单位</value>
+  </data>
+  <data name="ChannelAUnit.Caption" xml:space="preserve">
+    <value>A道</value>
+  </data>
+  <data name="rpCmbChannelUnit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rpCmbChannelUnit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="rpCmbChannelUnit1.Items" xml:space="preserve">
+    <value>ng/L</value>
+  </data>
+  <data name="rpCmbChannelUnit1.Items1" xml:space="preserve">
+    <value>µg/L</value>
+  </data>
+  <data name="rpCmbChannelUnit1.Items2" xml:space="preserve">
+    <value>mg/L</value>
+  </data>
+  <data name="rpCmbChannelUnit1.Items3" xml:space="preserve">
+    <value>g/L</value>
+  </data>
+  <data name="rpCmbChannelUnit1.Items4" xml:space="preserve">
+    <value>ng/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit1.Items5" xml:space="preserve">
+    <value>µg/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit1.Items6" xml:space="preserve">
+    <value>mg/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit1.Items7" xml:space="preserve">
+    <value>g/kg</value>
+  </data>
+  <data name="ChannelAUnit.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChannelAUnit.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="ChannelBUnit.Caption" xml:space="preserve">
+    <value>B道</value>
+  </data>
+  <data name="rpCmbChannelUnit2.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rpCmbChannelUnit2.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="rpCmbChannelUnit2.Items" xml:space="preserve">
+    <value>ng/L</value>
+  </data>
+  <data name="rpCmbChannelUnit2.Items1" xml:space="preserve">
+    <value>µg/L</value>
+  </data>
+  <data name="rpCmbChannelUnit2.Items2" xml:space="preserve">
+    <value>mg/L</value>
+  </data>
+  <data name="rpCmbChannelUnit2.Items3" xml:space="preserve">
+    <value>g/L</value>
+  </data>
+  <data name="rpCmbChannelUnit2.Items4" xml:space="preserve">
+    <value>ng/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit2.Items5" xml:space="preserve">
+    <value>µg/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit2.Items6" xml:space="preserve">
+    <value>mg/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit2.Items7" xml:space="preserve">
+    <value>g/kg</value>
+  </data>
+  <data name="ChannelBUnit.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChannelBUnit.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="ChannelCUnit.Caption" xml:space="preserve">
+    <value>C道</value>
+  </data>
+  <data name="rpCmbChannelUnit3.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rpCmbChannelUnit3.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="rpCmbChannelUnit3.Items" xml:space="preserve">
+    <value>ng/L</value>
+  </data>
+  <data name="rpCmbChannelUnit3.Items1" xml:space="preserve">
+    <value>µg/L</value>
+  </data>
+  <data name="rpCmbChannelUnit3.Items2" xml:space="preserve">
+    <value>mg/L</value>
+  </data>
+  <data name="rpCmbChannelUnit3.Items3" xml:space="preserve">
+    <value>g/L</value>
+  </data>
+  <data name="rpCmbChannelUnit3.Items4" xml:space="preserve">
+    <value>ng/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit3.Items5" xml:space="preserve">
+    <value>µg/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit3.Items6" xml:space="preserve">
+    <value>mg/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit3.Items7" xml:space="preserve">
+    <value>g/kg</value>
+  </data>
+  <data name="ChannelCUnit.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChannelCUnit.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="ChannelDUnit.Caption" xml:space="preserve">
+    <value>D道</value>
+  </data>
+  <data name="rpCmbChannelUnit4.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="rpCmbChannelUnit4.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="rpCmbChannelUnit4.Items" xml:space="preserve">
+    <value>ng/L</value>
+  </data>
+  <data name="rpCmbChannelUnit4.Items1" xml:space="preserve">
+    <value>µg/L</value>
+  </data>
+  <data name="rpCmbChannelUnit4.Items2" xml:space="preserve">
+    <value>mg/L</value>
+  </data>
+  <data name="rpCmbChannelUnit4.Items3" xml:space="preserve">
+    <value>g/L</value>
+  </data>
+  <data name="rpCmbChannelUnit4.Items4" xml:space="preserve">
+    <value>ng/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit4.Items5" xml:space="preserve">
+    <value>µg/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit4.Items6" xml:space="preserve">
+    <value>mg/kg</value>
+  </data>
+  <data name="rpCmbChannelUnit4.Items7" xml:space="preserve">
+    <value>g/kg</value>
+  </data>
+  <data name="ChannelDUnit.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChannelDUnit.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="Unit.MinWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="Unit.Name" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Unit.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="Dilution.Caption" xml:space="preserve">
+    <value>稀释倍数</value>
+  </data>
+  <data name="DiluteFactor.Caption" xml:space="preserve">
+    <value>稀释因子</value>
+  </data>
+  <data name="repositoryItemPopupContainerEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemPopupContainerEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="DiluteFactor.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DiluteFactor.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="DilutePowerA.Caption" xml:space="preserve">
+    <value>A道</value>
+  </data>
+  <data name="DilutePowerA.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DilutePowerA.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="DilutePowerB.Caption" xml:space="preserve">
+    <value>B道</value>
+  </data>
+  <data name="DilutePowerB.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DilutePowerB.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="DilutePowerC.Caption" xml:space="preserve">
+    <value>C道</value>
+  </data>
+  <data name="DilutePowerC.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DilutePowerC.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="DilutePowerD.Caption" xml:space="preserve">
+    <value>D道</value>
+  </data>
+  <data name="DilutePowerD.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DilutePowerD.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="Dilution.MinWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="Dilution.Name" xml:space="preserve">
+    <value>Dilution</value>
+  </data>
+  <data name="Dilution.Width" type="System.Int32, mscorlib">
+    <value>260</value>
+  </data>
+  <data name="CurveNo.Caption" xml:space="preserve">
+    <value>曲线号</value>
+  </data>
+  <data name="CurveA.Caption" xml:space="preserve">
+    <value>曲线A</value>
+  </data>
+  <data name="CurveA.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CurveA.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="CurveB.Caption" xml:space="preserve">
+    <value>曲线B</value>
+  </data>
+  <data name="CurveB.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CurveB.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="CurveC.Caption" xml:space="preserve">
+    <value>曲线C</value>
+  </data>
+  <data name="CurveC.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CurveC.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="CurveD.Caption" xml:space="preserve">
+    <value>曲线D</value>
+  </data>
+  <data name="CurveD.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CurveD.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="CurveNo.MinWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="CurveNo.Name" xml:space="preserve">
+    <value>CurveNo</value>
+  </data>
+  <data name="CurveNo.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="resource.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>255, 128, 128</value>
+  </data>
+  <data name="resource.BackColor1" type="System.Drawing.Color, System.Drawing">
+    <value>192, 255, 192</value>
+  </data>
+  <data name="resource.BackColor2" type="System.Drawing.Color, System.Drawing">
+    <value>Yellow</value>
+  </data>
+  <data name="resource.BackColor3" type="System.Drawing.Color, System.Drawing">
+    <value>LightSkyBlue</value>
+  </data>
+  <data name="resource.BackColor4" type="System.Drawing.Color, System.Drawing">
+    <value>PowderBlue</value>
+  </data>
+  <data name="resource.BackColor5" type="System.Drawing.Color, System.Drawing">
+    <value>Pink</value>
+  </data>
+  <data name="grdSample.Size" type="System.Drawing.Size, System.Drawing">
+    <value>960, 237</value>
+  </data>
+  <data name="grdSample.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;grdSample.Name" xml:space="preserve">
+    <value>grdSample</value>
+  </data>
+  <data name="&gt;&gt;grdSample.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;grdSample.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grdSample.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 71</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 151</value>
+  </data>
+  <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="textBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
+    <value>textBox5</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 53</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 323</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1082, 753</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;CheckStatus.Name" xml:space="preserve">
+    <value>CheckStatus</value>
+  </data>
+  <data name="&gt;&gt;CheckStatus.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
+    <value>timer1</value>
+  </data>
+  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Name" xml:space="preserve">
+    <value>gridView1</value>
+  </data>
+  <data name="&gt;&gt;gridView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.GridView, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn1.Name" xml:space="preserve">
+    <value>gridColumn1</value>
+  </data>
+  <data name="&gt;&gt;gridColumn1.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Name" xml:space="preserve">
+    <value>gridColumn2</value>
+  </data>
+  <data name="&gt;&gt;gridColumn2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Columns.GridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;gvSample.Name" xml:space="preserve">
+    <value>gvSample</value>
+  </data>
+  <data name="&gt;&gt;gvSample.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridView, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ChannelSample.Name" xml:space="preserve">
+    <value>ChannelSample</value>
+  </data>
+  <data name="&gt;&gt;ChannelSample.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;grdClmnID.Name" xml:space="preserve">
+    <value>grdClmnID</value>
+  </data>
+  <data name="&gt;&gt;grdClmnID.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SequenceNo.Name" xml:space="preserve">
+    <value>SequenceNo</value>
+  </data>
+  <data name="&gt;&gt;SequenceNo.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SampleName.Name" xml:space="preserve">
+    <value>SampleName</value>
+  </data>
+  <data name="&gt;&gt;SampleName.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SampleType.Name" xml:space="preserve">
+    <value>SampleType</value>
+  </data>
+  <data name="&gt;&gt;SampleType.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit1.Name" xml:space="preserve">
+    <value>repositoryItemTextEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemTextEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemTextEdit, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;PositionNo.Name" xml:space="preserve">
+    <value>PositionNo</value>
+  </data>
+  <data name="&gt;&gt;PositionNo.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SampleBlank.Name" xml:space="preserve">
+    <value>SampleBlank</value>
+  </data>
+  <data name="&gt;&gt;SampleBlank.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SampleBlankType.Name" xml:space="preserve">
+    <value>SampleBlankType</value>
+  </data>
+  <data name="&gt;&gt;SampleBlankType.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ChannelA.Name" xml:space="preserve">
+    <value>ChannelA</value>
+  </data>
+  <data name="&gt;&gt;ChannelA.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;APeakArea.Name" xml:space="preserve">
+    <value>APeakArea</value>
+  </data>
+  <data name="&gt;&gt;APeakArea.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;APeakArea2.Name" xml:space="preserve">
+    <value>APeakArea2</value>
+  </data>
+  <data name="&gt;&gt;APeakArea2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;AReferArea.Name" xml:space="preserve">
+    <value>AReferArea</value>
+  </data>
+  <data name="&gt;&gt;AReferArea.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ChannelB.Name" xml:space="preserve">
+    <value>ChannelB</value>
+  </data>
+  <data name="&gt;&gt;ChannelB.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BPeakArea.Name" xml:space="preserve">
+    <value>BPeakArea</value>
+  </data>
+  <data name="&gt;&gt;BPeakArea.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BPeakArea2.Name" xml:space="preserve">
+    <value>BPeakArea2</value>
+  </data>
+  <data name="&gt;&gt;BPeakArea2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BReferArea.Name" xml:space="preserve">
+    <value>BReferArea</value>
+  </data>
+  <data name="&gt;&gt;BReferArea.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ChannelC.Name" xml:space="preserve">
+    <value>ChannelC</value>
+  </data>
+  <data name="&gt;&gt;ChannelC.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CPeakArea.Name" xml:space="preserve">
+    <value>CPeakArea</value>
+  </data>
+  <data name="&gt;&gt;CPeakArea.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CPeakArea2.Name" xml:space="preserve">
+    <value>CPeakArea2</value>
+  </data>
+  <data name="&gt;&gt;CPeakArea2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CReferArea.Name" xml:space="preserve">
+    <value>CReferArea</value>
+  </data>
+  <data name="&gt;&gt;CReferArea.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ChannelD.Name" xml:space="preserve">
+    <value>ChannelD</value>
+  </data>
+  <data name="&gt;&gt;ChannelD.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DPeakArea.Name" xml:space="preserve">
+    <value>DPeakArea</value>
+  </data>
+  <data name="&gt;&gt;DPeakArea.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DPeakArea2.Name" xml:space="preserve">
+    <value>DPeakArea2</value>
+  </data>
+  <data name="&gt;&gt;DPeakArea2.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DReferArea.Name" xml:space="preserve">
+    <value>DReferArea</value>
+  </data>
+  <data name="&gt;&gt;DReferArea.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Conc.Name" xml:space="preserve">
+    <value>Conc</value>
+  </data>
+  <data name="&gt;&gt;Conc.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;AConcentration.Name" xml:space="preserve">
+    <value>AConcentration</value>
+  </data>
+  <data name="&gt;&gt;AConcentration.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;BConcentration.Name" xml:space="preserve">
+    <value>BConcentration</value>
+  </data>
+  <data name="&gt;&gt;BConcentration.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CConcentration.Name" xml:space="preserve">
+    <value>CConcentration</value>
+  </data>
+  <data name="&gt;&gt;CConcentration.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DConcentration.Name" xml:space="preserve">
+    <value>DConcentration</value>
+  </data>
+  <data name="&gt;&gt;DConcentration.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Unit.Name" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="&gt;&gt;Unit.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ChannelAUnit.Name" xml:space="preserve">
+    <value>ChannelAUnit</value>
+  </data>
+  <data name="&gt;&gt;ChannelAUnit.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rpCmbChannelUnit1.Name" xml:space="preserve">
+    <value>rpCmbChannelUnit1</value>
+  </data>
+  <data name="&gt;&gt;rpCmbChannelUnit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ChannelBUnit.Name" xml:space="preserve">
+    <value>ChannelBUnit</value>
+  </data>
+  <data name="&gt;&gt;ChannelBUnit.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rpCmbChannelUnit2.Name" xml:space="preserve">
+    <value>rpCmbChannelUnit2</value>
+  </data>
+  <data name="&gt;&gt;rpCmbChannelUnit2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ChannelCUnit.Name" xml:space="preserve">
+    <value>ChannelCUnit</value>
+  </data>
+  <data name="&gt;&gt;ChannelCUnit.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rpCmbChannelUnit3.Name" xml:space="preserve">
+    <value>rpCmbChannelUnit3</value>
+  </data>
+  <data name="&gt;&gt;rpCmbChannelUnit3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ChannelDUnit.Name" xml:space="preserve">
+    <value>ChannelDUnit</value>
+  </data>
+  <data name="&gt;&gt;ChannelDUnit.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rpCmbChannelUnit4.Name" xml:space="preserve">
+    <value>rpCmbChannelUnit4</value>
+  </data>
+  <data name="&gt;&gt;rpCmbChannelUnit4.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemComboBox, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Dilution.Name" xml:space="preserve">
+    <value>Dilution</value>
+  </data>
+  <data name="&gt;&gt;Dilution.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DiluteFactor.Name" xml:space="preserve">
+    <value>DiluteFactor</value>
+  </data>
+  <data name="&gt;&gt;DiluteFactor.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPopupContainerEdit1.Name" xml:space="preserve">
+    <value>repositoryItemPopupContainerEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPopupContainerEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DilutePowerA.Name" xml:space="preserve">
+    <value>DilutePowerA</value>
+  </data>
+  <data name="&gt;&gt;DilutePowerA.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DilutePowerB.Name" xml:space="preserve">
+    <value>DilutePowerB</value>
+  </data>
+  <data name="&gt;&gt;DilutePowerB.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DilutePowerC.Name" xml:space="preserve">
+    <value>DilutePowerC</value>
+  </data>
+  <data name="&gt;&gt;DilutePowerC.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;DilutePowerD.Name" xml:space="preserve">
+    <value>DilutePowerD</value>
+  </data>
+  <data name="&gt;&gt;DilutePowerD.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CurveNo.Name" xml:space="preserve">
+    <value>CurveNo</value>
+  </data>
+  <data name="&gt;&gt;CurveNo.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.GridBand, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CurveA.Name" xml:space="preserve">
+    <value>CurveA</value>
+  </data>
+  <data name="&gt;&gt;CurveA.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CurveB.Name" xml:space="preserve">
+    <value>CurveB</value>
+  </data>
+  <data name="&gt;&gt;CurveB.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CurveC.Name" xml:space="preserve">
+    <value>CurveC</value>
+  </data>
+  <data name="&gt;&gt;CurveC.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;CurveD.Name" xml:space="preserve">
+    <value>CurveD</value>
+  </data>
+  <data name="&gt;&gt;CurveD.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn, DevExpress.XtraGrid.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

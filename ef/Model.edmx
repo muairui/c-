@@ -1,0 +1,1870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="mainModel.Store" Provider="Devart.Data.SQLite" ProviderManifestToken="SQLite, 3.24.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="t_FIA8K_Channel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="200" />
+          <Property Name="CODE" Type="varchar" MaxLength="50" />
+          <Property Name="TYPE" Type="varchar" MaxLength="200" />
+          <Property Name="DETAILTYPE" Type="varchar" MaxLength="200" />
+          <Property Name="DETECTORTYPE" Type="int32" />
+          <Property Name="LASTRECTIME" Type="datetime" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_ChannelParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WAVELENGTH" Type="int32" />
+          <Property Name="PEAKTIME" Type="real" />
+          <Property Name="HEATING1" Type="int32" />
+          <Property Name="HEATING2" Type="int32" />
+          <Property Name="CONDENSINGUNIT" Type="int32" />
+          <Property Name="ULTRADIGESIONUNIT" Type="int32" />
+          <Property Name="ROTARVALVE1POSITION" Type="int32" />
+          <Property Name="ROTARVALVE2POSITION" Type="int32" />
+          <Property Name="LAMPSTATE" Type="int32" />
+          <Property Name="LIGHTINTENSITY" Type="int32" />
+          <Property Name="DISTRIBUTINGVALVEPOSITION" Type="int32" />
+          <Property Name="INTEGRALWIDTH" Type="real" />
+          <Property Name="INTEGRALAREASTARTTIME" Type="int32" />
+          <Property Name="INTEGRALAREAWIDTH" Type="int32" />
+          <Property Name="PUMPSPEEDGRADIENT" Type="int32" />
+          <Property Name="PUMPSPEED" Type="int32" />
+          <Property Name="ARRIVALTIME" Type="int32" />
+          <Property Name="INJECTTIME" Type="int32" />
+          <Property Name="CYCLETIME" Type="int32" />
+          <Property Name="SPEEDGRADIENTSTARTTIME" Type="int32" />
+          <Property Name="PICKMODE" Type="int32" />
+          <Property Name="FADINGREATION" Type="int32" />
+          <Property Name="WAVELENGTHVALUES" Type="varchar" MaxLength="100" />
+          <Property Name="DLDELAY" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_ChannelTestPara">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DEVICECODE" Type="varchar" MaxLength="50" />
+          <Property Name="PICKMODE" Type="int32" />
+          <Property Name="DECIMALDIGITS" Type="int32" />
+          <Property Name="FITTINGTIMES" Type="int32" />
+          <Property Name="PICKFREQUENCY" Type="int32" />
+          <Property Name="HEATING1" Type="int32" />
+          <Property Name="HEATING2" Type="int32" />
+          <Property Name="CONDENSING" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Data">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TESTID" Type="integer" />
+          <Property Name="PACKAGECOUNTER" Type="int32" />
+          <Property Name="CREATETIME" Type="real" />
+          <Property Name="ISPEAKSTART" Type="int32" />
+          <Property Name="ABSORBANCE" Type="nvarchar" MaxLength="65535" />
+          <Property Name="ABSFILTER" Type="nvarchar" MaxLength="65535" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Device">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="200" />
+          <Property Name="CODE" Type="varchar" MaxLength="50" />
+          <Property Name="CREATETIME" Type="date" />
+          <Property Name="CREATER" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_DevicePart">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DEVICEID" Type="integer" />
+          <Property Name="PARTID" Type="integer" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Dilutor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CODE" Type="varchar" MaxLength="50" />
+          <Property Name="INJECTORID" Type="varchar" MaxLength="50" />
+          <Property Name="TYPE" Type="int32" />
+          <Property Name="LASTRECTIME" Type="date" />
+          <Property Name="REMARK" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_DilutorParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SAMPLEPOSITION" Type="varchar" MaxLength="10" />
+          <Property Name="RESULTPOSITION" Type="varchar" MaxLength="10" />
+          <Property Name="MULTIPLE" Type="real" />
+          <Property Name="CONDITION1_MULTIPLE" Type="real" />
+          <Property Name="CONDITION2_CLEARTIME" Type="int32" />
+          <Property Name="DILUTECAPACITY" Type="real" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Function">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="30" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="100" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_History">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERCODE" Type="varchar" MaxLength="12" />
+          <Property Name="TESTTIME" Type="date" />
+          <Property Name="METHODFILE" Type="varchar" MaxLength="500" />
+          <Property Name="SEQUENCEFILE" Type="varchar" MaxLength="500" />
+          <Property Name="REMARK" Type="varchar" MaxLength="200" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Injector">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="200" />
+          <Property Name="CODE" Type="varchar" MaxLength="50" />
+          <Property Name="TYPE" Type="varchar" MaxLength="200" />
+          <Property Name="LASTRECTIME" Type="datetime" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_InjectorParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="INJECTTIME" Type="int32" />
+          <Property Name="NEEDLECLEANTIME" Type="int32" />
+          <Property Name="CLEANTIME" Type="int32" />
+          <Property Name="ISNEEDLECLEAN" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_InjectorTestPara">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DEVICECODE" Type="varchar" MaxLength="50" />
+          <Property Name="NEEDLEPOSITION" Type="varchar" MaxLength="10" />
+          <Property Name="CLEANPOSITION" Type="varchar" MaxLength="10" />
+          <Property Name="CARRYINGPOSITION" Type="varchar" MaxLength="10" />
+          <Property Name="ISUSEDPUMP" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Log">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="integer" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+          <Property Name="LOGINIP" Type="varchar" MaxLength="50" />
+          <Property Name="OPERATECONTENT" Type="varchar" MaxLength="200" />
+          <Property Name="DATETIME" Type="date" />
+          <Property Name="REMARK" Type="varchar" MaxLength="200" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Method">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="200" />
+          <Property Name="CODE" Type="varchar" MaxLength="50" />
+          <Property Name="TYPE" Type="int32" />
+          <Property Name="MODIFYTIME" Type="date" />
+          <Property Name="CREATER" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_MethodParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="METHODID" Type="integer" />
+          <Property Name="PARAMETERID" Type="integer" />
+          <Property Name="PARAMETERTYPE" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Part">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CODE" Type="varchar" MaxLength="50" />
+          <Property Name="DEVICETYPE" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Project">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CREATETIME" Type="date" />
+          <Property Name="TESTTIME" Type="date" />
+          <Property Name="TESTER" Type="varchar" MaxLength="50" />
+          <Property Name="DEVICEID" Type="integer" />
+          <Property Name="CHANNELCODE" Type="varchar" MaxLength="50" />
+          <Property Name="MAINCHANNELCODE" Type="varchar" MaxLength="50" />
+          <Property Name="INJECTORCODE" Type="varchar" MaxLength="50" />
+          <Property Name="CONFIGFILEPATH" Type="varchar" MaxLength="500" />
+          <Property Name="METHODFILEPATH" Type="varchar" MaxLength="500" />
+          <Property Name="SEQUENCEFILEPATH" Type="varchar" MaxLength="500" />
+          <Property Name="WORKLINEFILEPATH" Type="varchar" MaxLength="500" />
+          <Property Name="RESULTFILEPATH" Type="varchar" MaxLength="500" />
+          <Property Name="REPORTFILEPATH" Type="varchar" MaxLength="500" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_PumpSpeedGradient">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CHANNELPARAMID" Type="integer" />
+          <Property Name="PUMPSPEED" Type="int32" />
+          <Property Name="TIMELONG" Type="int32" />
+          <Property Name="INJECTORPOSITION" Type="int32" />
+          <Property Name="SIXPOSITIONVALVE" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_ReportInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PROJECTID" Type="integer" />
+          <Property Name="DETECTCOMPANYNAME" Type="varchar" MaxLength="200" />
+          <Property Name="DELEGATECOMPANYNAME" Type="varchar" MaxLength="200" />
+          <Property Name="DETECTPROJECT" Type="varchar" MaxLength="200" />
+          <Property Name="DEVICENAME" Type="varchar" MaxLength="200" />
+          <Property Name="DETECTER" Type="varchar" MaxLength="50" />
+          <Property Name="CHECKER" Type="varchar" MaxLength="50" />
+          <Property Name="CREATETIME" Type="date" />
+          <Property Name="CREATER" Type="varchar" MaxLength="50" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Role">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="30" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="200" />
+          <Property Name="STATE" Type="integer" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_RolePerm">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ROLEID" Type="integer" />
+          <Property Name="ITEMTYPE" Type="integer" />
+          <Property Name="LINKEDID" Type="integer" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Sample">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SEQUENCEID" Type="integer" />
+          <Property Name="WORKLINEID" Type="varchar" MaxLength="50" />
+          <Property Name="NAME" Type="varchar" MaxLength="200" />
+          <Property Name="SEQUENCE" Type="int32" />
+          <Property Name="SAMPLETYPE" Type="int32" />
+          <Property Name="POSITION" Type="int32" />
+          <Property Name="TESTTIMES" Type="int32" />
+          <Property Name="CONCENTRATION" Type="real" />
+          <Property Name="CONCENTRATIONDEVIATION" Type="real" />
+          <Property Name="ADDBASEAMOUNT" Type="real" />
+          <Property Name="CALCCONCENTRATION" Type="real" />
+          <Property Name="CALCULATETIMES" Type="int32" />
+          <Property Name="GETVALUETYPE" Type="int32" />
+          <Property Name="PEAKHEIGHT" Type="real" />
+          <Property Name="PEAKAREA" Type="real" />
+          <Property Name="STATE" Type="int32" />
+          <Property Name="NEEDLECLEANTIME" Type="int32" />
+          <Property Name="ARRIVALTIME" Type="int32" />
+          <Property Name="INJECTTIME" Type="int32" />
+          <Property Name="INJECTTIME2" Type="int32" />
+          <Property Name="CLEANTIME" Type="int32" />
+          <Property Name="CYCLETIME" Type="int32" />
+          <Property Name="PEAKTIME" Type="real" />
+          <Property Name="INTEGRALWIDTH" Type="real" />
+          <Property Name="INTEGRALAREASTARTTIME" Type="int32" />
+          <Property Name="INTEGRALAREAWIDTH" Type="int32" />
+          <Property Name="ISSOLIDSAMPLE" Type="int32" />
+          <Property Name="VOLUME" Type="int32" />
+          <Property Name="DILUTIONRATE" Type="int32" />
+          <Property Name="SAMPLEWEIGHT" Type="int32" />
+          <Property Name="SOLIDCONVERTUNIT" Type="int32" />
+          <Property Name="SOLIDCONVCALCCONCENTRATION" Type="real" />
+          <Property Name="ISUSEDREPORT" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_SamplePeak">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SAMPLEID" Type="integer" />
+          <Property Name="TESTTIMENO" Type="int32" />
+          <Property Name="OUTPUTSTARTTIME" Type="real" />
+          <Property Name="INTEGRALSTARTTIME" Type="real" />
+          <Property Name="INTEGRALENDTIME" Type="real" />
+          <Property Name="CONCENTRATION" Type="real" />
+          <Property Name="CONCENTRATIONDEVIATION" Type="real" />
+          <Property Name="ADDBASEAMOUNT" Type="real" />
+          <Property Name="CALCCONCENTRATION" Type="real" />
+          <Property Name="PEAKHEIGHT" Type="real" />
+          <Property Name="PEAKAREA" Type="real" />
+          <Property Name="STATE" Type="int32" />
+          <Property Name="NEEDLECLEANTIME" Type="int32" />
+          <Property Name="ARRIVALTIME" Type="int32" />
+          <Property Name="INJECTTIME" Type="int32" />
+          <Property Name="INJECTTIME2" Type="int32" />
+          <Property Name="CLEANTIME" Type="int32" />
+          <Property Name="CYCLETIME" Type="int32" />
+          <Property Name="PEAKTIME" Type="real" />
+          <Property Name="INTEGRALWIDTH" Type="real" />
+          <Property Name="INTEGRALAREASTARTTIME" Type="int32" />
+          <Property Name="INTEGRALAREAWIDTH" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Test">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TESTTIME" Type="date" />
+          <Property Name="TESTER" Type="varchar" MaxLength="50" />
+          <Property Name="DEVICEID" Type="varchar" MaxLength="50" />
+          <Property Name="DEVICETYPE" Type="int32" />
+          <Property Name="METHODID" Type="varchar" MaxLength="50" />
+          <Property Name="PICKMODE" Type="int32" />
+          <Property Name="DECIMALDIGITS" Type="int32" />
+          <Property Name="FITTINGTIMES" Type="int32" />
+          <Property Name="PICKFREQUENCY" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_TestConfigPara">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TESTID" Type="int32" />
+          <Property Name="DEVICEPARTTYPE" Type="int32" />
+          <Property Name="TESTPARAID" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_TestSample">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SEQUENCECODE" Type="varchar" MaxLength="50" />
+          <Property Name="SEQUENCENAME" Type="varchar" MaxLength="200" />
+          <Property Name="CONCENTRATIONUNIT" Type="int32" />
+          <Property Name="INJECTORTYPE" Type="int32" />
+          <Property Name="AREASEQUENCE" Type="varchar" MaxLength="50" />
+          <Property Name="NEEDLETYPE" Type="int32" />
+          <Property Name="SEQTYPE" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+          <Property Name="USERTYPE" Type="int32" />
+          <Property Name="USERCODE" Type="varchar" MaxLength="12" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="32" />
+          <Property Name="STATE" Type="integer" />
+          <Property Name="REMARK" Type="varchar" MaxLength="200" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_UserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="integer" />
+          <Property Name="ROLEID" Type="integer" />
+          <Property Name="CREATETIME" Type="date" />
+          <Property Name="VALIDTIME" Type="integer" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Warning">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DEVICECODE" Type="varchar" MaxLength="50" />
+          <Property Name="DEVICETYPE" Type="int32" />
+          <Property Name="WARNING" Type="int32" />
+          <Property Name="CREATETIME" Type="date" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_WorkLine">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="200" />
+          <Property Name="TYPE" Type="int32" />
+          <Property Name="CODE" Type="varchar" MaxLength="50" />
+          <Property Name="FITTINGTIMES" Type="int32" />
+          <Property Name="MODIFYTIME" Type="date" />
+          <Property Name="CREATER" Type="varchar" MaxLength="50" />
+          <Property Name="CONCENTRATIONUNIT" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_WorkLinePoint">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WORKLINEID" Type="integer" />
+          <Property Name="SEQNO" Type="int32" />
+          <Property Name="CONCENTRATION" Type="real" />
+          <Property Name="ABSORBANCE" Type="real" />
+          <Property Name="CALCCONCENTRATION" Type="real" />
+          <Property Name="RELATIVEDEVIATION" Type="real" />
+          <Property Name="ISUSED" Type="int32" />
+          <Property Name="REMARK" Type="varchar" MaxLength="500" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="date" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="date" />
+        </EntityType>
+        <EntityContainer Name="mainModelStoreContainer">
+          <EntitySet Name="t_FIA8K_Channel" EntityType="Self.t_FIA8K_Channel" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_ChannelParam" EntityType="Self.t_FIA8K_ChannelParam" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_ChannelTestPara" EntityType="Self.t_FIA8K_ChannelTestPara" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Data" EntityType="Self.t_FIA8K_Data" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Device" EntityType="Self.t_FIA8K_Device" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_DevicePart" EntityType="Self.t_FIA8K_DevicePart" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Dilutor" EntityType="Self.t_FIA8K_Dilutor" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_DilutorParam" EntityType="Self.t_FIA8K_DilutorParam" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Function" EntityType="Self.t_FIA8K_Function" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_History" EntityType="Self.t_FIA8K_History" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Injector" EntityType="Self.t_FIA8K_Injector" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_InjectorParam" EntityType="Self.t_FIA8K_InjectorParam" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_InjectorTestPara" EntityType="Self.t_FIA8K_InjectorTestPara" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Log" EntityType="Self.t_FIA8K_Log" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Method" EntityType="Self.t_FIA8K_Method" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_MethodParam" EntityType="Self.t_FIA8K_MethodParam" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Part" EntityType="Self.t_FIA8K_Part" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Project" EntityType="Self.t_FIA8K_Project" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_PumpSpeedGradient" EntityType="Self.t_FIA8K_PumpSpeedGradient" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_ReportInfo" EntityType="Self.t_FIA8K_ReportInfo" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Role" EntityType="Self.t_FIA8K_Role" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_RolePerm" EntityType="Self.t_FIA8K_RolePerm" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Sample" EntityType="Self.t_FIA8K_Sample" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_SamplePeak" EntityType="Self.t_FIA8K_SamplePeak" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Test" EntityType="Self.t_FIA8K_Test" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_TestConfigPara" EntityType="Self.t_FIA8K_TestConfigPara" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_TestSample" EntityType="Self.t_FIA8K_TestSample" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_User" EntityType="Self.t_FIA8K_User" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_UserRole" EntityType="Self.t_FIA8K_UserRole" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_Warning" EntityType="Self.t_FIA8K_Warning" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_WorkLine" EntityType="Self.t_FIA8K_WorkLine" Schema="main" store:Type="Tables" />
+          <EntitySet Name="t_FIA8K_WorkLinePoint" EntityType="Self.t_FIA8K_WorkLinePoint" Schema="main" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mainModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="t_FIA8K_Channel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DETAILTYPE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DETECTORTYPE" Type="Int32" />
+          <Property Name="LASTRECTIME" Type="DateTime" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_ChannelParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WAVELENGTH" Type="Int32" />
+          <Property Name="PEAKTIME" Type="Double" />
+          <Property Name="HEATING1" Type="Int32" />
+          <Property Name="HEATING2" Type="Int32" />
+          <Property Name="CONDENSINGUNIT" Type="Int32" />
+          <Property Name="ULTRADIGESIONUNIT" Type="Int32" />
+          <Property Name="ROTARVALVE1POSITION" Type="Int32" />
+          <Property Name="ROTARVALVE2POSITION" Type="Int32" />
+          <Property Name="LAMPSTATE" Type="Int32" />
+          <Property Name="LIGHTINTENSITY" Type="Int32" />
+          <Property Name="DISTRIBUTINGVALVEPOSITION" Type="Int32" />
+          <Property Name="INTEGRALWIDTH" Type="Double" />
+          <Property Name="INTEGRALAREASTARTTIME" Type="Int32" />
+          <Property Name="INTEGRALAREAWIDTH" Type="Int32" />
+          <Property Name="PUMPSPEEDGRADIENT" Type="Int32" />
+          <Property Name="PUMPSPEED" Type="Int32" />
+          <Property Name="ARRIVALTIME" Type="Int32" />
+          <Property Name="INJECTTIME" Type="Int32" />
+          <Property Name="CYCLETIME" Type="Int32" />
+          <Property Name="SPEEDGRADIENTSTARTTIME" Type="Int32" />
+          <Property Name="PICKMODE" Type="Int32" />
+          <Property Name="FADINGREATION" Type="Int32" />
+          <Property Name="WAVELENGTHVALUES" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DLDELAY" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_ChannelTestPara">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DEVICECODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICKMODE" Type="Int32" />
+          <Property Name="DECIMALDIGITS" Type="Int32" />
+          <Property Name="FITTINGTIMES" Type="Int32" />
+          <Property Name="PICKFREQUENCY" Type="Int32" />
+          <Property Name="HEATING1" Type="Int32" />
+          <Property Name="HEATING2" Type="Int32" />
+          <Property Name="CONDENSING" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Data">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TESTID" Type="Int64" />
+          <Property Name="PACKAGECOUNTER" Type="Int32" />
+          <Property Name="CREATETIME" Type="Double" />
+          <Property Name="ISPEAKSTART" Type="Int32" />
+          <Property Name="ABSORBANCE" Type="String" MaxLength="65535" FixedLength="false" Unicode="true" />
+          <Property Name="ABSFILTER" Type="String" MaxLength="65535" FixedLength="false" Unicode="true" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Device">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CREATETIME" Type="DateTime" />
+          <Property Name="CREATER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_DevicePart">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DEVICEID" Type="Int64" />
+          <Property Name="PARTID" Type="Int64" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Dilutor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INJECTORID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE" Type="Int32" />
+          <Property Name="LASTRECTIME" Type="DateTime" />
+          <Property Name="REMARK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_DilutorParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SAMPLEPOSITION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="RESULTPOSITION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MULTIPLE" Type="Double" />
+          <Property Name="CONDITION1_MULTIPLE" Type="Double" />
+          <Property Name="CONDITION2_CLEARTIME" Type="Int32" />
+          <Property Name="DILUTECAPACITY" Type="Double" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Function">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_History">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERCODE" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="TESTTIME" Type="DateTime" />
+          <Property Name="METHODFILE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SEQUENCEFILE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="REMARK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Injector">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LASTRECTIME" Type="DateTime" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_InjectorParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="INJECTTIME" Type="Int32" />
+          <Property Name="NEEDLECLEANTIME" Type="Int32" />
+          <Property Name="CLEANTIME" Type="Int32" />
+          <Property Name="ISNEEDLECLEAN" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_InjectorTestPara">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DEVICECODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NEEDLEPOSITION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CLEANPOSITION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CARRYINGPOSITION" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ISUSEDPUMP" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Log">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int64" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LOGINIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OPERATECONTENT" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DATETIME" Type="DateTime" />
+          <Property Name="REMARK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Method">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE" Type="Int32" />
+          <Property Name="MODIFYTIME" Type="DateTime" />
+          <Property Name="CREATER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_MethodParam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="METHODID" Type="Int64" />
+          <Property Name="PARAMETERID" Type="Int64" />
+          <Property Name="PARAMETERTYPE" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Part">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEVICETYPE" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Project">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CREATETIME" Type="DateTime" />
+          <Property Name="TESTTIME" Type="DateTime" />
+          <Property Name="TESTER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEVICEID" Type="Int64" />
+          <Property Name="CHANNELCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MAINCHANNELCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INJECTORCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CONFIGFILEPATH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="METHODFILEPATH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SEQUENCEFILEPATH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="WORKLINEFILEPATH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RESULTFILEPATH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="REPORTFILEPATH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_PumpSpeedGradient">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CHANNELPARAMID" Type="Int64" />
+          <Property Name="PUMPSPEED" Type="Int32" />
+          <Property Name="TIMELONG" Type="Int32" />
+          <Property Name="INJECTORPOSITION" Type="Int32" />
+          <Property Name="SIXPOSITIONVALVE" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_ReportInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PROJECTID" Type="Int64" />
+          <Property Name="DETECTCOMPANYNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DELEGATECOMPANYNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DETECTPROJECT" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DEVICENAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DETECTER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CHECKER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CREATETIME" Type="DateTime" />
+          <Property Name="CREATER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Role">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int64" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_RolePerm">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ROLEID" Type="Int64" />
+          <Property Name="ITEMTYPE" Type="Int64" />
+          <Property Name="LINKEDID" Type="Int64" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Sample">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SEQUENCEID" Type="Int64" />
+          <Property Name="WORKLINEID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="SEQUENCE" Type="Int32" />
+          <Property Name="SAMPLETYPE" Type="Int32" />
+          <Property Name="POSITION" Type="Int32" />
+          <Property Name="TESTTIMES" Type="Int32" />
+          <Property Name="CONCENTRATION" Type="Double" />
+          <Property Name="CONCENTRATIONDEVIATION" Type="Double" />
+          <Property Name="ADDBASEAMOUNT" Type="Double" />
+          <Property Name="CALCCONCENTRATION" Type="Double" />
+          <Property Name="CALCULATETIMES" Type="Int32" />
+          <Property Name="GETVALUETYPE" Type="Int32" />
+          <Property Name="PEAKHEIGHT" Type="Double" />
+          <Property Name="PEAKAREA" Type="Double" />
+          <Property Name="STATE" Type="Int32" />
+          <Property Name="NEEDLECLEANTIME" Type="Int32" />
+          <Property Name="ARRIVALTIME" Type="Int32" />
+          <Property Name="INJECTTIME" Type="Int32" />
+          <Property Name="INJECTTIME2" Type="Int32" />
+          <Property Name="CLEANTIME" Type="Int32" />
+          <Property Name="CYCLETIME" Type="Int32" />
+          <Property Name="PEAKTIME" Type="Double" />
+          <Property Name="INTEGRALWIDTH" Type="Double" />
+          <Property Name="INTEGRALAREASTARTTIME" Type="Int32" />
+          <Property Name="INTEGRALAREAWIDTH" Type="Int32" />
+          <Property Name="ISSOLIDSAMPLE" Type="Int32" />
+          <Property Name="VOLUME" Type="Int32" />
+          <Property Name="DILUTIONRATE" Type="Int32" />
+          <Property Name="SAMPLEWEIGHT" Type="Int32" />
+          <Property Name="SOLIDCONVERTUNIT" Type="Int32" />
+          <Property Name="SOLIDCONVCALCCONCENTRATION" Type="Double" />
+          <Property Name="ISUSEDREPORT" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_SamplePeak">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SAMPLEID" Type="Int64" />
+          <Property Name="TESTTIMENO" Type="Int32" />
+          <Property Name="OUTPUTSTARTTIME" Type="Double" />
+          <Property Name="INTEGRALSTARTTIME" Type="Double" />
+          <Property Name="INTEGRALENDTIME" Type="Double" />
+          <Property Name="CONCENTRATION" Type="Double" />
+          <Property Name="CONCENTRATIONDEVIATION" Type="Double" />
+          <Property Name="ADDBASEAMOUNT" Type="Double" />
+          <Property Name="CALCCONCENTRATION" Type="Double" />
+          <Property Name="PEAKHEIGHT" Type="Double" />
+          <Property Name="PEAKAREA" Type="Double" />
+          <Property Name="STATE" Type="Int32" />
+          <Property Name="NEEDLECLEANTIME" Type="Int32" />
+          <Property Name="ARRIVALTIME" Type="Int32" />
+          <Property Name="INJECTTIME" Type="Int32" />
+          <Property Name="INJECTTIME2" Type="Int32" />
+          <Property Name="CLEANTIME" Type="Int32" />
+          <Property Name="CYCLETIME" Type="Int32" />
+          <Property Name="PEAKTIME" Type="Double" />
+          <Property Name="INTEGRALWIDTH" Type="Double" />
+          <Property Name="INTEGRALAREASTARTTIME" Type="Int32" />
+          <Property Name="INTEGRALAREAWIDTH" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Test">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TESTTIME" Type="DateTime" />
+          <Property Name="TESTER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEVICEID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEVICETYPE" Type="Int32" />
+          <Property Name="METHODID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PICKMODE" Type="Int32" />
+          <Property Name="DECIMALDIGITS" Type="Int32" />
+          <Property Name="FITTINGTIMES" Type="Int32" />
+          <Property Name="PICKFREQUENCY" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_TestConfigPara">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TESTID" Type="Int32" />
+          <Property Name="DEVICEPARTTYPE" Type="Int32" />
+          <Property Name="TESTPARAID" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_TestSample">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SEQUENCECODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SEQUENCENAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CONCENTRATIONUNIT" Type="Int32" />
+          <Property Name="INJECTORTYPE" Type="Int32" />
+          <Property Name="AREASEQUENCE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NEEDLETYPE" Type="Int32" />
+          <Property Name="SEQTYPE" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="USERTYPE" Type="Int32" />
+          <Property Name="USERCODE" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="PASSWORD" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="Int64" />
+          <Property Name="REMARK" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_UserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int64" />
+          <Property Name="ROLEID" Type="Int64" />
+          <Property Name="CREATETIME" Type="DateTime" />
+          <Property Name="VALIDTIME" Type="Int64" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_Warning">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DEVICECODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEVICETYPE" Type="Int32" />
+          <Property Name="WARNING" Type="Int32" />
+          <Property Name="CREATETIME" Type="DateTime" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_WorkLine">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE" Type="Int32" />
+          <Property Name="CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FITTINGTIMES" Type="Int32" />
+          <Property Name="MODIFYTIME" Type="DateTime" />
+          <Property Name="CREATER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CONCENTRATIONUNIT" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="t_FIA8K_WorkLinePoint">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WORKLINEID" Type="Int64" />
+          <Property Name="SEQNO" Type="Int32" />
+          <Property Name="CONCENTRATION" Type="Double" />
+          <Property Name="ABSORBANCE" Type="Double" />
+          <Property Name="CALCCONCENTRATION" Type="Double" />
+          <Property Name="RELATIVEDEVIATION" Type="Double" />
+          <Property Name="ISUSED" Type="Int32" />
+          <Property Name="REMARK" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityContainer Name="mainEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="t_FIA8K_Channel" EntityType="Self.t_FIA8K_Channel" />
+          <EntitySet Name="t_FIA8K_ChannelParam" EntityType="Self.t_FIA8K_ChannelParam" />
+          <EntitySet Name="t_FIA8K_ChannelTestPara" EntityType="Self.t_FIA8K_ChannelTestPara" />
+          <EntitySet Name="t_FIA8K_Data" EntityType="Self.t_FIA8K_Data" />
+          <EntitySet Name="t_FIA8K_Device" EntityType="Self.t_FIA8K_Device" />
+          <EntitySet Name="t_FIA8K_DevicePart" EntityType="Self.t_FIA8K_DevicePart" />
+          <EntitySet Name="t_FIA8K_Dilutor" EntityType="Self.t_FIA8K_Dilutor" />
+          <EntitySet Name="t_FIA8K_DilutorParam" EntityType="Self.t_FIA8K_DilutorParam" />
+          <EntitySet Name="t_FIA8K_Function" EntityType="Self.t_FIA8K_Function" />
+          <EntitySet Name="t_FIA8K_History" EntityType="Self.t_FIA8K_History" />
+          <EntitySet Name="t_FIA8K_Injector" EntityType="Self.t_FIA8K_Injector" />
+          <EntitySet Name="t_FIA8K_InjectorParam" EntityType="Self.t_FIA8K_InjectorParam" />
+          <EntitySet Name="t_FIA8K_InjectorTestPara" EntityType="Self.t_FIA8K_InjectorTestPara" />
+          <EntitySet Name="t_FIA8K_Log" EntityType="Self.t_FIA8K_Log" />
+          <EntitySet Name="t_FIA8K_Method" EntityType="Self.t_FIA8K_Method" />
+          <EntitySet Name="t_FIA8K_MethodParam" EntityType="Self.t_FIA8K_MethodParam" />
+          <EntitySet Name="t_FIA8K_Part" EntityType="Self.t_FIA8K_Part" />
+          <EntitySet Name="t_FIA8K_Project" EntityType="Self.t_FIA8K_Project" />
+          <EntitySet Name="t_FIA8K_PumpSpeedGradient" EntityType="Self.t_FIA8K_PumpSpeedGradient" />
+          <EntitySet Name="t_FIA8K_ReportInfo" EntityType="Self.t_FIA8K_ReportInfo" />
+          <EntitySet Name="t_FIA8K_Role" EntityType="Self.t_FIA8K_Role" />
+          <EntitySet Name="t_FIA8K_RolePerm" EntityType="Self.t_FIA8K_RolePerm" />
+          <EntitySet Name="t_FIA8K_Sample" EntityType="Self.t_FIA8K_Sample" />
+          <EntitySet Name="t_FIA8K_SamplePeak" EntityType="Self.t_FIA8K_SamplePeak" />
+          <EntitySet Name="t_FIA8K_Test" EntityType="Self.t_FIA8K_Test" />
+          <EntitySet Name="t_FIA8K_TestConfigPara" EntityType="Self.t_FIA8K_TestConfigPara" />
+          <EntitySet Name="t_FIA8K_TestSample" EntityType="Self.t_FIA8K_TestSample" />
+          <EntitySet Name="t_FIA8K_User" EntityType="Self.t_FIA8K_User" />
+          <EntitySet Name="t_FIA8K_UserRole" EntityType="Self.t_FIA8K_UserRole" />
+          <EntitySet Name="t_FIA8K_Warning" EntityType="Self.t_FIA8K_Warning" />
+          <EntitySet Name="t_FIA8K_WorkLine" EntityType="Self.t_FIA8K_WorkLine" />
+          <EntitySet Name="t_FIA8K_WorkLinePoint" EntityType="Self.t_FIA8K_WorkLinePoint" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mainModelStoreContainer" CdmEntityContainer="mainEntities">
+          <EntitySetMapping Name="t_FIA8K_Channel">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Channel">
+              <MappingFragment StoreEntitySet="t_FIA8K_Channel">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="DETAILTYPE" ColumnName="DETAILTYPE" />
+                <ScalarProperty Name="DETECTORTYPE" ColumnName="DETECTORTYPE" />
+                <ScalarProperty Name="LASTRECTIME" ColumnName="LASTRECTIME" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_ChannelParam">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_ChannelParam">
+              <MappingFragment StoreEntitySet="t_FIA8K_ChannelParam">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WAVELENGTH" ColumnName="WAVELENGTH" />
+                <ScalarProperty Name="PEAKTIME" ColumnName="PEAKTIME" />
+                <ScalarProperty Name="HEATING1" ColumnName="HEATING1" />
+                <ScalarProperty Name="HEATING2" ColumnName="HEATING2" />
+                <ScalarProperty Name="CONDENSINGUNIT" ColumnName="CONDENSINGUNIT" />
+                <ScalarProperty Name="ULTRADIGESIONUNIT" ColumnName="ULTRADIGESIONUNIT" />
+                <ScalarProperty Name="ROTARVALVE1POSITION" ColumnName="ROTARVALVE1POSITION" />
+                <ScalarProperty Name="ROTARVALVE2POSITION" ColumnName="ROTARVALVE2POSITION" />
+                <ScalarProperty Name="LAMPSTATE" ColumnName="LAMPSTATE" />
+                <ScalarProperty Name="LIGHTINTENSITY" ColumnName="LIGHTINTENSITY" />
+                <ScalarProperty Name="DISTRIBUTINGVALVEPOSITION" ColumnName="DISTRIBUTINGVALVEPOSITION" />
+                <ScalarProperty Name="INTEGRALWIDTH" ColumnName="INTEGRALWIDTH" />
+                <ScalarProperty Name="INTEGRALAREASTARTTIME" ColumnName="INTEGRALAREASTARTTIME" />
+                <ScalarProperty Name="INTEGRALAREAWIDTH" ColumnName="INTEGRALAREAWIDTH" />
+                <ScalarProperty Name="PUMPSPEEDGRADIENT" ColumnName="PUMPSPEEDGRADIENT" />
+                <ScalarProperty Name="PUMPSPEED" ColumnName="PUMPSPEED" />
+                <ScalarProperty Name="ARRIVALTIME" ColumnName="ARRIVALTIME" />
+                <ScalarProperty Name="INJECTTIME" ColumnName="INJECTTIME" />
+                <ScalarProperty Name="CYCLETIME" ColumnName="CYCLETIME" />
+                <ScalarProperty Name="SPEEDGRADIENTSTARTTIME" ColumnName="SPEEDGRADIENTSTARTTIME" />
+                <ScalarProperty Name="PICKMODE" ColumnName="PICKMODE" />
+                <ScalarProperty Name="FADINGREATION" ColumnName="FADINGREATION" />
+                <ScalarProperty Name="WAVELENGTHVALUES" ColumnName="WAVELENGTHVALUES" />
+                <ScalarProperty Name="DLDELAY" ColumnName="DLDELAY" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_ChannelTestPara">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_ChannelTestPara">
+              <MappingFragment StoreEntitySet="t_FIA8K_ChannelTestPara">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DEVICECODE" ColumnName="DEVICECODE" />
+                <ScalarProperty Name="PICKMODE" ColumnName="PICKMODE" />
+                <ScalarProperty Name="DECIMALDIGITS" ColumnName="DECIMALDIGITS" />
+                <ScalarProperty Name="FITTINGTIMES" ColumnName="FITTINGTIMES" />
+                <ScalarProperty Name="PICKFREQUENCY" ColumnName="PICKFREQUENCY" />
+                <ScalarProperty Name="HEATING1" ColumnName="HEATING1" />
+                <ScalarProperty Name="HEATING2" ColumnName="HEATING2" />
+                <ScalarProperty Name="CONDENSING" ColumnName="CONDENSING" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Data">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Data">
+              <MappingFragment StoreEntitySet="t_FIA8K_Data">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TESTID" ColumnName="TESTID" />
+                <ScalarProperty Name="PACKAGECOUNTER" ColumnName="PACKAGECOUNTER" />
+                <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+                <ScalarProperty Name="ISPEAKSTART" ColumnName="ISPEAKSTART" />
+                <ScalarProperty Name="ABSORBANCE" ColumnName="ABSORBANCE" />
+                <ScalarProperty Name="ABSFILTER" ColumnName="ABSFILTER" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Device">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Device">
+              <MappingFragment StoreEntitySet="t_FIA8K_Device">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+                <ScalarProperty Name="CREATER" ColumnName="CREATER" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_DevicePart">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_DevicePart">
+              <MappingFragment StoreEntitySet="t_FIA8K_DevicePart">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DEVICEID" ColumnName="DEVICEID" />
+                <ScalarProperty Name="PARTID" ColumnName="PARTID" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Dilutor">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Dilutor">
+              <MappingFragment StoreEntitySet="t_FIA8K_Dilutor">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="INJECTORID" ColumnName="INJECTORID" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="LASTRECTIME" ColumnName="LASTRECTIME" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_DilutorParam">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_DilutorParam">
+              <MappingFragment StoreEntitySet="t_FIA8K_DilutorParam">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SAMPLEPOSITION" ColumnName="SAMPLEPOSITION" />
+                <ScalarProperty Name="RESULTPOSITION" ColumnName="RESULTPOSITION" />
+                <ScalarProperty Name="MULTIPLE" ColumnName="MULTIPLE" />
+                <ScalarProperty Name="CONDITION1_MULTIPLE" ColumnName="CONDITION1_MULTIPLE" />
+                <ScalarProperty Name="CONDITION2_CLEARTIME" ColumnName="CONDITION2_CLEARTIME" />
+                <ScalarProperty Name="DILUTECAPACITY" ColumnName="DILUTECAPACITY" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Function">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Function">
+              <MappingFragment StoreEntitySet="t_FIA8K_Function">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_History">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_History">
+              <MappingFragment StoreEntitySet="t_FIA8K_History">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERCODE" ColumnName="USERCODE" />
+                <ScalarProperty Name="TESTTIME" ColumnName="TESTTIME" />
+                <ScalarProperty Name="METHODFILE" ColumnName="METHODFILE" />
+                <ScalarProperty Name="SEQUENCEFILE" ColumnName="SEQUENCEFILE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Injector">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Injector">
+              <MappingFragment StoreEntitySet="t_FIA8K_Injector">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="LASTRECTIME" ColumnName="LASTRECTIME" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_InjectorParam">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_InjectorParam">
+              <MappingFragment StoreEntitySet="t_FIA8K_InjectorParam">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="INJECTTIME" ColumnName="INJECTTIME" />
+                <ScalarProperty Name="NEEDLECLEANTIME" ColumnName="NEEDLECLEANTIME" />
+                <ScalarProperty Name="CLEANTIME" ColumnName="CLEANTIME" />
+                <ScalarProperty Name="ISNEEDLECLEAN" ColumnName="ISNEEDLECLEAN" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_InjectorTestPara">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_InjectorTestPara">
+              <MappingFragment StoreEntitySet="t_FIA8K_InjectorTestPara">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DEVICECODE" ColumnName="DEVICECODE" />
+                <ScalarProperty Name="NEEDLEPOSITION" ColumnName="NEEDLEPOSITION" />
+                <ScalarProperty Name="CLEANPOSITION" ColumnName="CLEANPOSITION" />
+                <ScalarProperty Name="CARRYINGPOSITION" ColumnName="CARRYINGPOSITION" />
+                <ScalarProperty Name="ISUSEDPUMP" ColumnName="ISUSEDPUMP" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Log">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Log">
+              <MappingFragment StoreEntitySet="t_FIA8K_Log">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="LOGINIP" ColumnName="LOGINIP" />
+                <ScalarProperty Name="OPERATECONTENT" ColumnName="OPERATECONTENT" />
+                <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Method">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Method">
+              <MappingFragment StoreEntitySet="t_FIA8K_Method">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="MODIFYTIME" ColumnName="MODIFYTIME" />
+                <ScalarProperty Name="CREATER" ColumnName="CREATER" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_MethodParam">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_MethodParam">
+              <MappingFragment StoreEntitySet="t_FIA8K_MethodParam">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="METHODID" ColumnName="METHODID" />
+                <ScalarProperty Name="PARAMETERID" ColumnName="PARAMETERID" />
+                <ScalarProperty Name="PARAMETERTYPE" ColumnName="PARAMETERTYPE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Part">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Part">
+              <MappingFragment StoreEntitySet="t_FIA8K_Part">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="DEVICETYPE" ColumnName="DEVICETYPE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Project">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Project">
+              <MappingFragment StoreEntitySet="t_FIA8K_Project">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+                <ScalarProperty Name="TESTTIME" ColumnName="TESTTIME" />
+                <ScalarProperty Name="TESTER" ColumnName="TESTER" />
+                <ScalarProperty Name="DEVICEID" ColumnName="DEVICEID" />
+                <ScalarProperty Name="CHANNELCODE" ColumnName="CHANNELCODE" />
+                <ScalarProperty Name="MAINCHANNELCODE" ColumnName="MAINCHANNELCODE" />
+                <ScalarProperty Name="INJECTORCODE" ColumnName="INJECTORCODE" />
+                <ScalarProperty Name="CONFIGFILEPATH" ColumnName="CONFIGFILEPATH" />
+                <ScalarProperty Name="METHODFILEPATH" ColumnName="METHODFILEPATH" />
+                <ScalarProperty Name="SEQUENCEFILEPATH" ColumnName="SEQUENCEFILEPATH" />
+                <ScalarProperty Name="WORKLINEFILEPATH" ColumnName="WORKLINEFILEPATH" />
+                <ScalarProperty Name="RESULTFILEPATH" ColumnName="RESULTFILEPATH" />
+                <ScalarProperty Name="REPORTFILEPATH" ColumnName="REPORTFILEPATH" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_PumpSpeedGradient">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_PumpSpeedGradient">
+              <MappingFragment StoreEntitySet="t_FIA8K_PumpSpeedGradient">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CHANNELPARAMID" ColumnName="CHANNELPARAMID" />
+                <ScalarProperty Name="PUMPSPEED" ColumnName="PUMPSPEED" />
+                <ScalarProperty Name="TIMELONG" ColumnName="TIMELONG" />
+                <ScalarProperty Name="INJECTORPOSITION" ColumnName="INJECTORPOSITION" />
+                <ScalarProperty Name="SIXPOSITIONVALVE" ColumnName="SIXPOSITIONVALVE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_ReportInfo">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_ReportInfo">
+              <MappingFragment StoreEntitySet="t_FIA8K_ReportInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PROJECTID" ColumnName="PROJECTID" />
+                <ScalarProperty Name="DETECTCOMPANYNAME" ColumnName="DETECTCOMPANYNAME" />
+                <ScalarProperty Name="DELEGATECOMPANYNAME" ColumnName="DELEGATECOMPANYNAME" />
+                <ScalarProperty Name="DETECTPROJECT" ColumnName="DETECTPROJECT" />
+                <ScalarProperty Name="DEVICENAME" ColumnName="DEVICENAME" />
+                <ScalarProperty Name="DETECTER" ColumnName="DETECTER" />
+                <ScalarProperty Name="CHECKER" ColumnName="CHECKER" />
+                <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+                <ScalarProperty Name="CREATER" ColumnName="CREATER" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Role">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Role">
+              <MappingFragment StoreEntitySet="t_FIA8K_Role">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_RolePerm">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_RolePerm">
+              <MappingFragment StoreEntitySet="t_FIA8K_RolePerm">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+                <ScalarProperty Name="ITEMTYPE" ColumnName="ITEMTYPE" />
+                <ScalarProperty Name="LINKEDID" ColumnName="LINKEDID" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Sample">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Sample">
+              <MappingFragment StoreEntitySet="t_FIA8K_Sample">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SEQUENCEID" ColumnName="SEQUENCEID" />
+                <ScalarProperty Name="WORKLINEID" ColumnName="WORKLINEID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="SEQUENCE" ColumnName="SEQUENCE" />
+                <ScalarProperty Name="SAMPLETYPE" ColumnName="SAMPLETYPE" />
+                <ScalarProperty Name="POSITION" ColumnName="POSITION" />
+                <ScalarProperty Name="TESTTIMES" ColumnName="TESTTIMES" />
+                <ScalarProperty Name="CONCENTRATION" ColumnName="CONCENTRATION" />
+                <ScalarProperty Name="CONCENTRATIONDEVIATION" ColumnName="CONCENTRATIONDEVIATION" />
+                <ScalarProperty Name="ADDBASEAMOUNT" ColumnName="ADDBASEAMOUNT" />
+                <ScalarProperty Name="CALCCONCENTRATION" ColumnName="CALCCONCENTRATION" />
+                <ScalarProperty Name="CALCULATETIMES" ColumnName="CALCULATETIMES" />
+                <ScalarProperty Name="GETVALUETYPE" ColumnName="GETVALUETYPE" />
+                <ScalarProperty Name="PEAKHEIGHT" ColumnName="PEAKHEIGHT" />
+                <ScalarProperty Name="PEAKAREA" ColumnName="PEAKAREA" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="NEEDLECLEANTIME" ColumnName="NEEDLECLEANTIME" />
+                <ScalarProperty Name="ARRIVALTIME" ColumnName="ARRIVALTIME" />
+                <ScalarProperty Name="INJECTTIME" ColumnName="INJECTTIME" />
+                <ScalarProperty Name="INJECTTIME2" ColumnName="INJECTTIME2" />
+                <ScalarProperty Name="CLEANTIME" ColumnName="CLEANTIME" />
+                <ScalarProperty Name="CYCLETIME" ColumnName="CYCLETIME" />
+                <ScalarProperty Name="PEAKTIME" ColumnName="PEAKTIME" />
+                <ScalarProperty Name="INTEGRALWIDTH" ColumnName="INTEGRALWIDTH" />
+                <ScalarProperty Name="INTEGRALAREASTARTTIME" ColumnName="INTEGRALAREASTARTTIME" />
+                <ScalarProperty Name="INTEGRALAREAWIDTH" ColumnName="INTEGRALAREAWIDTH" />
+                <ScalarProperty Name="ISSOLIDSAMPLE" ColumnName="ISSOLIDSAMPLE" />
+                <ScalarProperty Name="VOLUME" ColumnName="VOLUME" />
+                <ScalarProperty Name="DILUTIONRATE" ColumnName="DILUTIONRATE" />
+                <ScalarProperty Name="SAMPLEWEIGHT" ColumnName="SAMPLEWEIGHT" />
+                <ScalarProperty Name="SOLIDCONVERTUNIT" ColumnName="SOLIDCONVERTUNIT" />
+                <ScalarProperty Name="SOLIDCONVCALCCONCENTRATION" ColumnName="SOLIDCONVCALCCONCENTRATION" />
+                <ScalarProperty Name="ISUSEDREPORT" ColumnName="ISUSEDREPORT" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_SamplePeak">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_SamplePeak">
+              <MappingFragment StoreEntitySet="t_FIA8K_SamplePeak">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SAMPLEID" ColumnName="SAMPLEID" />
+                <ScalarProperty Name="TESTTIMENO" ColumnName="TESTTIMENO" />
+                <ScalarProperty Name="OUTPUTSTARTTIME" ColumnName="OUTPUTSTARTTIME" />
+                <ScalarProperty Name="INTEGRALSTARTTIME" ColumnName="INTEGRALSTARTTIME" />
+                <ScalarProperty Name="INTEGRALENDTIME" ColumnName="INTEGRALENDTIME" />
+                <ScalarProperty Name="CONCENTRATION" ColumnName="CONCENTRATION" />
+                <ScalarProperty Name="CONCENTRATIONDEVIATION" ColumnName="CONCENTRATIONDEVIATION" />
+                <ScalarProperty Name="ADDBASEAMOUNT" ColumnName="ADDBASEAMOUNT" />
+                <ScalarProperty Name="CALCCONCENTRATION" ColumnName="CALCCONCENTRATION" />
+                <ScalarProperty Name="PEAKHEIGHT" ColumnName="PEAKHEIGHT" />
+                <ScalarProperty Name="PEAKAREA" ColumnName="PEAKAREA" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="NEEDLECLEANTIME" ColumnName="NEEDLECLEANTIME" />
+                <ScalarProperty Name="ARRIVALTIME" ColumnName="ARRIVALTIME" />
+                <ScalarProperty Name="INJECTTIME" ColumnName="INJECTTIME" />
+                <ScalarProperty Name="INJECTTIME2" ColumnName="INJECTTIME2" />
+                <ScalarProperty Name="CLEANTIME" ColumnName="CLEANTIME" />
+                <ScalarProperty Name="CYCLETIME" ColumnName="CYCLETIME" />
+                <ScalarProperty Name="PEAKTIME" ColumnName="PEAKTIME" />
+                <ScalarProperty Name="INTEGRALWIDTH" ColumnName="INTEGRALWIDTH" />
+                <ScalarProperty Name="INTEGRALAREASTARTTIME" ColumnName="INTEGRALAREASTARTTIME" />
+                <ScalarProperty Name="INTEGRALAREAWIDTH" ColumnName="INTEGRALAREAWIDTH" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Test">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Test">
+              <MappingFragment StoreEntitySet="t_FIA8K_Test">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TESTTIME" ColumnName="TESTTIME" />
+                <ScalarProperty Name="TESTER" ColumnName="TESTER" />
+                <ScalarProperty Name="DEVICEID" ColumnName="DEVICEID" />
+                <ScalarProperty Name="DEVICETYPE" ColumnName="DEVICETYPE" />
+                <ScalarProperty Name="METHODID" ColumnName="METHODID" />
+                <ScalarProperty Name="PICKMODE" ColumnName="PICKMODE" />
+                <ScalarProperty Name="DECIMALDIGITS" ColumnName="DECIMALDIGITS" />
+                <ScalarProperty Name="FITTINGTIMES" ColumnName="FITTINGTIMES" />
+                <ScalarProperty Name="PICKFREQUENCY" ColumnName="PICKFREQUENCY" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_TestConfigPara">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_TestConfigPara">
+              <MappingFragment StoreEntitySet="t_FIA8K_TestConfigPara">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TESTID" ColumnName="TESTID" />
+                <ScalarProperty Name="DEVICEPARTTYPE" ColumnName="DEVICEPARTTYPE" />
+                <ScalarProperty Name="TESTPARAID" ColumnName="TESTPARAID" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_TestSample">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_TestSample">
+              <MappingFragment StoreEntitySet="t_FIA8K_TestSample">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SEQUENCECODE" ColumnName="SEQUENCECODE" />
+                <ScalarProperty Name="SEQUENCENAME" ColumnName="SEQUENCENAME" />
+                <ScalarProperty Name="CONCENTRATIONUNIT" ColumnName="CONCENTRATIONUNIT" />
+                <ScalarProperty Name="INJECTORTYPE" ColumnName="INJECTORTYPE" />
+                <ScalarProperty Name="AREASEQUENCE" ColumnName="AREASEQUENCE" />
+                <ScalarProperty Name="NEEDLETYPE" ColumnName="NEEDLETYPE" />
+                <ScalarProperty Name="SEQTYPE" ColumnName="SEQTYPE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_User">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_User">
+              <MappingFragment StoreEntitySet="t_FIA8K_User">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="USERTYPE" ColumnName="USERTYPE" />
+                <ScalarProperty Name="USERCODE" ColumnName="USERCODE" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_UserRole">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_UserRole">
+              <MappingFragment StoreEntitySet="t_FIA8K_UserRole">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+                <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+                <ScalarProperty Name="VALIDTIME" ColumnName="VALIDTIME" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_Warning">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_Warning">
+              <MappingFragment StoreEntitySet="t_FIA8K_Warning">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DEVICECODE" ColumnName="DEVICECODE" />
+                <ScalarProperty Name="DEVICETYPE" ColumnName="DEVICETYPE" />
+                <ScalarProperty Name="WARNING" ColumnName="WARNING" />
+                <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_WorkLine">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_WorkLine">
+              <MappingFragment StoreEntitySet="t_FIA8K_WorkLine">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="FITTINGTIMES" ColumnName="FITTINGTIMES" />
+                <ScalarProperty Name="MODIFYTIME" ColumnName="MODIFYTIME" />
+                <ScalarProperty Name="CREATER" ColumnName="CREATER" />
+                <ScalarProperty Name="CONCENTRATIONUNIT" ColumnName="CONCENTRATIONUNIT" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_FIA8K_WorkLinePoint">
+            <EntityTypeMapping TypeName="mainModel.t_FIA8K_WorkLinePoint">
+              <MappingFragment StoreEntitySet="t_FIA8K_WorkLinePoint">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WORKLINEID" ColumnName="WORKLINEID" />
+                <ScalarProperty Name="SEQNO" ColumnName="SEQNO" />
+                <ScalarProperty Name="CONCENTRATION" ColumnName="CONCENTRATION" />
+                <ScalarProperty Name="ABSORBANCE" ColumnName="ABSORBANCE" />
+                <ScalarProperty Name="CALCCONCENTRATION" ColumnName="CALCCONCENTRATION" />
+                <ScalarProperty Name="RELATIVEDEVIATION" ColumnName="RELATIVEDEVIATION" />
+                <ScalarProperty Name="ISUSED" ColumnName="ISUSED" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

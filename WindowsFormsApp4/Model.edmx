@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="mainModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="datasource=F:\muwm\Work\前处理产品线\Titan.Phoenix\Titan.Phoenix\bin\Debug\DataBase\Phoenix.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Batch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Creator" Type="varchar" MaxLength="50" />
+          <Property Name="CreatTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUser" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="LeftMethodID" Type="integer" />
+          <Property Name="RightMethodID" Type="integer" />
+        </EntityType>
+        <EntityType Name="DeviceConfig">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="Type" Type="integer" />
+          <Property Name="Key " Type="varchar" MaxLength="50" />
+          <Property Name="DeviceType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="integer" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+          <Property Name="LOGINIP" Type="varchar" MaxLength="50" />
+          <Property Name="OPERATECONTENT" Type="varchar" MaxLength="200" />
+          <Property Name="DATETIME" Type="datetime" />
+          <Property Name="REMARK" Type="varchar" MaxLength="200" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="datetime" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Method">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Creator" Type="varchar" MaxLength="50" />
+          <Property Name="BottleMaterial" Type="varchar" MaxLength="50" />
+          <Property Name="SampleVolume " Type="real" />
+          <Property Name="CreatTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUser" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="MethodStep">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="MethodID" Type="integer" Nullable="false" />
+          <Property Name="StepType" Type="integer" />
+          <Property Name="StepIndex" Type="integer" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="MethodStepConfig">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="StepID" Type="integer" Nullable="false" />
+          <Property Name="Key" Type="varchar" MaxLength="100" />
+          <Property Name="Value" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Sample">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="BatchId" Type="integer" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Volume" Type="real" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="Index" Type="integer" />
+          <Property Name="Location" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+          <Property Name="USERTYPE" Type="int" />
+          <Property Name="USERCODE" Type="varchar" MaxLength="12" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="32" />
+          <Property Name="STATE" Type="integer" />
+          <Property Name="REMARK" Type="varchar" MaxLength="200" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="datetime" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="integer" />
+          <Property Name="ROLEID" Type="integer" />
+          <Property Name="CREATETIME" Type="datetime" />
+          <Property Name="VALIDTIME" Type="integer" />
+          <Property Name="INSERTUSER" Type="varchar" MaxLength="50" />
+          <Property Name="INSERTDATETIME" Type="datetime" />
+          <Property Name="UPDATEUSER" Type="varchar" MaxLength="50" />
+          <Property Name="UPDATEDATETIME" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="mainModelStoreContainer">
+          <EntitySet Name="Batch" EntityType="Self.Batch" store:Type="Tables" />
+          <EntitySet Name="DeviceConfig" EntityType="Self.DeviceConfig" store:Type="Tables" />
+          <EntitySet Name="Log" EntityType="Self.Log" store:Type="Tables" />
+          <EntitySet Name="Method" EntityType="Self.Method" store:Type="Tables" />
+          <EntitySet Name="MethodStep" EntityType="Self.MethodStep" store:Type="Tables" />
+          <EntitySet Name="MethodStepConfig" EntityType="Self.MethodStepConfig" store:Type="Tables" />
+          <EntitySet Name="Sample" EntityType="Self.Sample" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" store:Type="Tables" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mainModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Batch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Creator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatTime" Type="DateTime" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="UpdateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LeftMethodID" Type="Int64" />
+          <Property Name="RightMethodID" Type="Int64" />
+        </EntityType>
+        <EntityType Name="DeviceConfig">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="Type" Type="Int64" />
+          <Property Name="Key_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeviceType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int64" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LOGINIP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OPERATECONTENT" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DATETIME" Type="DateTime" />
+          <Property Name="REMARK" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Method">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Creator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BottleMaterial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SampleVolume_" Type="Double" />
+          <Property Name="CreatTime" Type="DateTime" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="UpdateUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MethodStep">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="MethodID" Type="Int64" Nullable="false" />
+          <Property Name="StepType" Type="Int64" />
+          <Property Name="StepIndex" Type="Int64" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MethodStepConfig">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="StepID" Type="Int64" Nullable="false" />
+          <Property Name="Key" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Sample">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="BatchId" Type="Int64" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Volume" Type="Double" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Index" Type="Int64" />
+          <Property Name="Location" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USERTYPE" Type="Int32" />
+          <Property Name="USERCODE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="STATE" Type="Int64" />
+          <Property Name="REMARK" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int64" />
+          <Property Name="ROLEID" Type="Int64" />
+          <Property Name="CREATETIME" Type="DateTime" />
+          <Property Name="VALIDTIME" Type="Int64" />
+          <Property Name="INSERTUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="INSERTDATETIME" Type="DateTime" />
+          <Property Name="UPDATEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UPDATEDATETIME" Type="DateTime" />
+        </EntityType>
+        <EntityContainer Name="mainEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Batch" EntityType="Self.Batch" />
+          <EntitySet Name="DeviceConfig" EntityType="Self.DeviceConfig" />
+          <EntitySet Name="Log" EntityType="Self.Log" />
+          <EntitySet Name="Method" EntityType="Self.Method" />
+          <EntitySet Name="MethodStep" EntityType="Self.MethodStep" />
+          <EntitySet Name="MethodStepConfig" EntityType="Self.MethodStepConfig" />
+          <EntitySet Name="Sample" EntityType="Self.Sample" />
+          <EntitySet Name="User" EntityType="Self.User" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mainModelStoreContainer" CdmEntityContainer="mainEntities1">
+          <EntitySetMapping Name="Batch">
+            <EntityTypeMapping TypeName="mainModel.Batch">
+              <MappingFragment StoreEntitySet="Batch">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="CreatTime" ColumnName="CreatTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LeftMethodID" ColumnName="LeftMethodID" />
+                <ScalarProperty Name="RightMethodID" ColumnName="RightMethodID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceConfig">
+            <EntityTypeMapping TypeName="mainModel.DeviceConfig">
+              <MappingFragment StoreEntitySet="DeviceConfig">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Key_" ColumnName="Key " />
+                <ScalarProperty Name="DeviceType" ColumnName="DeviceType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Log">
+            <EntityTypeMapping TypeName="mainModel.Log">
+              <MappingFragment StoreEntitySet="Log">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="LOGINIP" ColumnName="LOGINIP" />
+                <ScalarProperty Name="OPERATECONTENT" ColumnName="OPERATECONTENT" />
+                <ScalarProperty Name="DATETIME" ColumnName="DATETIME" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Method">
+            <EntityTypeMapping TypeName="mainModel.Method">
+              <MappingFragment StoreEntitySet="Method">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="BottleMaterial" ColumnName="BottleMaterial" />
+                <ScalarProperty Name="SampleVolume_" ColumnName="SampleVolume " />
+                <ScalarProperty Name="CreatTime" ColumnName="CreatTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUser" ColumnName="UpdateUser" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MethodStep">
+            <EntityTypeMapping TypeName="mainModel.MethodStep">
+              <MappingFragment StoreEntitySet="MethodStep">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MethodID" ColumnName="MethodID" />
+                <ScalarProperty Name="StepType" ColumnName="StepType" />
+                <ScalarProperty Name="StepIndex" ColumnName="StepIndex" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MethodStepConfig">
+            <EntityTypeMapping TypeName="mainModel.MethodStepConfig">
+              <MappingFragment StoreEntitySet="MethodStepConfig">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="StepID" ColumnName="StepID" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sample">
+            <EntityTypeMapping TypeName="mainModel.Sample">
+              <MappingFragment StoreEntitySet="Sample">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Index" ColumnName="Index" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="mainModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="USERTYPE" ColumnName="USERTYPE" />
+                <ScalarProperty Name="USERCODE" ColumnName="USERCODE" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRole">
+            <EntityTypeMapping TypeName="mainModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+                <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+                <ScalarProperty Name="VALIDTIME" ColumnName="VALIDTIME" />
+                <ScalarProperty Name="INSERTUSER" ColumnName="INSERTUSER" />
+                <ScalarProperty Name="INSERTDATETIME" ColumnName="INSERTDATETIME" />
+                <ScalarProperty Name="UPDATEUSER" ColumnName="UPDATEUSER" />
+                <ScalarProperty Name="UPDATEDATETIME" ColumnName="UPDATEDATETIME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
